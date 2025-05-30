@@ -1,0 +1,16 @@
+class Solution {
+    public boolean threeConsecutiveOdds(int[] arr) {
+        int l=arr.length;
+        if(l<3)
+            return false;
+        else
+        {
+            for (int i = 0; i < l - 2; i++) {
+            if ((arr[i] % 2 != 0) && (arr[i + 1] % 2 != 0) && (arr[i + 2] % 2 != 0)) {
+                return true;
+                }
+            }
+        }
+        return false;
+    }
+}
