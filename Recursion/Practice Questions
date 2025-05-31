@@ -28,3 +28,28 @@ class Main {
 
 2. Find a target in a n array with recursion (Linear Search)
 Solution: 
+class Main {
+    public static void main(String[] args) 
+    {
+        int[] nums = {1, 2, 3, 1, 5};  // Sample input
+        int index = 0;
+        int target = 51;
+        System.out.println(LinearSearchwithRecursion(nums,target, index));
+    }
+    public static boolean LinearSearchwithRecursion(int[] nums, int target, int index)
+    {
+        
+        if(index == nums.length)
+        {
+            return false;
+        }
+        if(nums[index] == target)
+        {
+            return true;
+        }
+        else
+        {
+            return LinearSearchwithRecursion(nums,target,index+1);
+        }
+    }
+}
