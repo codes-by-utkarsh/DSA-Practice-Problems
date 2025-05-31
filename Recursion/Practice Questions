@@ -53,3 +53,34 @@ class Main {
         }
     }
 }
+
+
+3. Store the index of matching element with target in an array list.
+Code:
+import java.util.ArrayList;
+
+class Main {
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 1, 5};  // Sample input
+        int target = 1;
+        System.out.println(LinearSearchWithRecursion(nums, target, 0));
+    }
+
+    public static ArrayList<Integer> LinearSearchWithRecursion(int[] nums, int target, int index) {
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        if (index == nums.length) {
+            return list;
+        }
+
+        // Recursive call
+        list = LinearSearchWithRecursion(nums, target, index + 1);
+
+        // Add current index to the result if it matches the target
+        if (nums[index] == target) {
+            list.add(0, index); // add at the front to maintain order
+        }
+
+        return list;
+    }
+}
