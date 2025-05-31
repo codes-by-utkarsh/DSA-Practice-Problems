@@ -1,0 +1,39 @@
+You are given an integer mountain array arr of length n where the values increase to a peak element and then decrease.
+Return the index of the peak element.
+Your task is to solve it in O(log(n)) time complexity.
+
+Example 1:
+Input: arr = [0,1,0]
+Output: 1
+
+Example 2:
+Input: arr = [0,2,1,0]
+Output: 1
+
+
+Solution :
+ class Solution {
+    public int peakIndexInMountainArray(int[] arr) {
+        int start=0;
+        int end= arr.length-1;
+        while(start<end)
+        {
+            int mid=(start+end)/2;
+            if(arr[mid] > arr[mid+1])
+            {
+                end=mid;
+            }
+            else
+            {
+                start=mid+1;
+            }
+        }
+        return start;
+    }
+}
+
+Explanattion :
+We have to find the peak index in a mountain array.So first we have to find out the peak that is pivot.
+if(arr[mid] > arr[mid+1]) -> It means here lies the peak. At the peak end = mid;
+    Now the thing which we are left with is the sorted array only in asc. The next time it iterates It will more refine the array to lesser element and at last we will be left with start=end=mid=peak element
+If not that case , start=mid+1 will be performed. And the same will continue.
