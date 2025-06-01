@@ -1,0 +1,44 @@
+class Main {
+    public static void main(String[] args) {
+        int[] arr={3,1,2,6,4,4,6,7,11,4,2,7,8,4,7};
+        selectionSortwRecursion(arr,0);
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.print(arr[i]+" ");
+        }
+    }
+    
+    public static void selectionSortwRecursion(int[] arr,int i)
+    {
+        if(i==arr.length)
+        {
+            return ; 
+        }
+        if(i<arr.length)
+        {
+            int last = arr.length - i -1;
+            int maxIndex = getmaxIndex(arr, 0 , last);
+            swap(arr,maxIndex,last);
+        }
+        selectionSortwRecursion(arr,i+1);
+        
+    }
+    public static int getmaxIndex(int[] arr,int first,int end)
+    {
+        int max=first;
+        for(int i=first;i<=end;i++)
+        {
+            if(arr[i] > arr[max])
+            {
+                max=i;
+            }
+        }
+        return max;
+    }
+    public static void swap(int[] arr, int first, int second)
+    {
+        int temp=arr[first];
+        arr[first]=arr[second];
+        arr[second]=temp;
+    }
+}
