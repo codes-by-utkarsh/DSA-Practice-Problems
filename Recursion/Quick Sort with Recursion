@@ -38,3 +38,49 @@ class Main {
         quickSort(arr , low , e);
         quickSort(arr, s ,high);
     }
+
+
+// This is a non recursive code :
+
+
+import java.util.Stack;
+
+class Solution {
+    public int[] sortArray(int[] nums) {
+        quickSort(nums);
+        return nums;
+    }
+
+    public static void quickSort(int[] arr) {
+        Stack<int[]> stack = new Stack<>();
+        stack.push(new int[]{0, arr.length - 1});
+
+        while (!stack.isEmpty()) {
+            int[] range = stack.pop();
+            int low = range[0], high = range[1];
+
+            if (low >= high) continue;
+
+            int s = low;
+            int e = high;
+            int pivot = arr[(low + high) / 2];
+
+            while (s <= e) {
+                while (arr[s] < pivot) s++;
+                while (arr[e] > pivot) e--;
+
+                if (s <= e) {
+                    int temp = arr[s];
+                    arr[s] = arr[e];
+                    arr[e] = temp;
+                    s++;
+                    e--;
+                }
+            }
+
+            // Push the partitions onto the stack
+            if (low < e) stack.push(new int[]{low, e});
+            if (s < high) stack.push(new int[]{s, high});
+        }
+    }
+}
