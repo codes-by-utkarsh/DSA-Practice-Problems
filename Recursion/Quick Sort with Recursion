@@ -1,3 +1,40 @@
-public static void quickSort(int[] arr , int low , int high)
-{
-    
+import java.util.Arrays;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Try programiz.pro");
+        int[] arr = {10,80,30,90,40,50,70};
+        quickSort(arr,0,arr.length -1);
+        System.out.println(Arrays.toString(arr));
+        
+    }
+    public static void quickSort(int[] arr, int low, int high)
+    {
+        if(low >= high)
+        {
+            return;
+        }
+        int s = low;
+        int e = high;
+        int m = (s+e)/2;
+        int pivot = arr[m];
+        
+        while(arr[s] < pivot)  // if this is true then it means is it placed at its correect position
+        {
+            s++;
+        }
+        while(arr[e] > pivot)
+        {
+            e--;
+        }
+        // if these conditions are false then we have to swap the values
+        if(s <= e)
+        {
+            int temp = arr[s];
+            arr[s]= arr[e];
+            arr[e] = temp;
+            s++;
+            e--;
+        }
+        quickSort(arr , low , e);
+        quickSort(arr, s ,high);
+    }
