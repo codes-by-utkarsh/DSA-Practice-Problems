@@ -1,3 +1,9 @@
+Approach : So in this, count the number except 0 with a variable and increment it by 1 and add it to the array nums.
+Now for the remaining ones, start another loop with the last index of the incremented variable to the last index.
+And add 0 in each one
+Them print the nums in Arrays.toSting()
+
+
 import java.util.Arrays;
 class Solution {
     public void moveZeroes(int[] nums) {
