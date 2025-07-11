@@ -26,10 +26,4 @@ However, feel free to open an issue if you spot any mistakes or have suggestions
 
 ---
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 Happy Coding! 😄✨
