@@ -1,3 +1,35 @@
-This repository contains my personal solutions to a wide range of Data Structures and Algorithms (DSA) problems. The goal of this project is to systematically practice and strengthen my problem-solving skills by implementing clean, efficient, and well-structured solutions in Java.
+# LeetCode Solutions 🚀
 
-#[Leetcode Profile]: (https://leetcode.com/u/drizzlehx/)
+Welcome to my **LeetCode Solutions** repository!  
+This repo contains my personal solutions to various LeetCode problems, organized by problem number, difficulty, and topic.
+
+---
+
+## ✨ Why I Made This Repo
+
+- 📚 To track my learning and improvement.
+- 🧠 To revisit and optimize old solutions.
+- 🔗 To share my approach with others preparing for interviews.
+
+---
+
+## 🚀 My LeetCode Profile
+
+> [👉 View my LeetCode profile here!](https://leetcode.com/u/drizzlehx)
+
+---
+
+## 🤝 Contributions
+
+This repository is mainly for my personal learning.  
+However, feel free to open an issue if you spot any mistakes or have suggestions!
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Happy Coding! 😄✨
