@@ -1,0 +1,24 @@
+Bruteforce is easy. Nested for loop.
+Optimised sol - Sort the array first then check the adjacent element
+
+import java.util.Arrays;
+class Solution {
+    public boolean containsDuplicate(int[] nums) 
+    {
+        int[] sorted=sort(nums);
+        for(int i=0;i<sorted.length-1;i++)
+        {
+            if(sorted[i]==sorted[i+1])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public int[] sort(int[] nums)
+    {
+        Arrays.sort(nums);
+        return nums;
+    }
+}
