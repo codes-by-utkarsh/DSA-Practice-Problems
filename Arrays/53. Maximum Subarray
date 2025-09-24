@@ -1,0 +1,15 @@
+class Solution {
+    public int maxSubArray(int[] nums) 
+    {
+        //sum print karna hai to ek currentmax lenge or ek totalmx
+        int currentSum=nums[0];
+        int FinalSum=nums[0];
+        for(int i=1;i<nums.length;i++)
+        {
+            currentSum = Math.max(nums[i], currentSum + nums[i]);
+            // Update the maximum sum found so far
+            FinalSum = Math.max(FinalSum, currentSum);
+        }
+        return FinalSum;
+    }
+}
