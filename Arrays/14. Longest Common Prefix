@@ -1,4 +1,5 @@
 //optimal solution
+// This is the optimal solution
 
 public class Solution {
     public String longestCommonPrefix(String[] strs) {
