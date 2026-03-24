@@ -1,0 +1,43 @@
+In this code, what has to be done is :
+
+Take the algo step by step, by i=0;
+Then s.length;
+Whenever there is white space. do i++
+Whenever there is a + / - For + -> sign =1 For - -> sign = -1
+Then finally round off
+
+class Solution {
+    public int myAtoi(String s) {
+        int i = 0;
+        int n = s.length();
+
+        // skip spaces
+        while (i < n && s.charAt(i) == ' ') {
+            i++;
+        }
+
+        // sign
+        int sign = 1;
+        if (i < n && (s.charAt(i) == '+' || s.charAt(i) == '-')) {
+            if (s.charAt(i) == '-') sign = -1;
+            i++;
+        }
+
+        int result = 0;
+
+        // digits
+        while (i < n && Character.isDigit(s.charAt(i))) {
+            int digit = s.charAt(i) - '0';
+
+            // overflow check
+            if (result > (Integer.MAX_VALUE - digit) / 10) {
+                return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+
+            result = result * 10 + digit;
+            i++;
+        }
+
+        return result * sign;
+    }
+}
