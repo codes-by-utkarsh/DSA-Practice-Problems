@@ -1,0 +1,33 @@
+class Solution {
+    public ListNode rotateRight(ListNode head, int k) 
+    {
+        if(head == null || head.next == null || k == 0)
+        {
+            return head;
+        }
+        ListNode tail = head; int l=1;
+        while(tail.next!=null)
+        {
+            l++;
+            tail=tail.next;
+        }
+        if(k%l == 0)  return head;
+        k=k%l;
+        tail.next = head;
+        ListNode newNode = findNode(head,l-k);
+        head = newNode.next;
+        newNode.next = null;
+        return head;
+    }
+    public ListNode findNode(ListNode temp, int k)
+    {
+        int c=1;
+        while(temp!=null)
+        {
+            if(c==k) return temp;
+            c++;
+            temp=temp.next;
+        }
+        return temp;
+    }
+}
