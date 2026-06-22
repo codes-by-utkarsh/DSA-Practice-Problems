@@ -25,5 +25,3 @@ This repository is mainly for my personal learning.
 However, feel free to open an issue if you spot any mistakes or have suggestions!
 
 ---
-
-Happy Coding! 😄✨
