@@ -15,7 +15,7 @@ This repo contains my personal solutions to various LeetCode problems, organized
 
 ## 🚀 My LeetCode Profile
 
-> [👉 View my LeetCode profile here!](https://leetcode.com/u/drizzlehx)
+> [LeetCode Profile!](https://leetcode.com/u/drizzlehx)
 
 ---
 
